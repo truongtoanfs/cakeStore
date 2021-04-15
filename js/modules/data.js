@@ -1,0 +1,88 @@
+const cakes = [
+  {
+    id: 1,
+    name: "cake T101",
+    img: "img/cake-1.jpg",
+    type: "cake",
+    price: "15",
+  },
+  {
+    id: 2,
+    name: "cake GT39",
+    img: "img/cake-2.jpg",
+    type: "cake",
+    price: "25",
+  },
+  {
+    id: 3,
+    name: "cake love",
+    img: "img/cake-3.jpg",
+    type: "cake",
+    price: "50",
+  },
+  {
+    id: 4,
+    name: "cake LT26",
+    img: "img/cake-4.jpg",
+    type: "cake",
+    price: "23",
+  },
+  {
+    id: 5,
+    name: "cake MT41",
+    img: "img/cake-5.jpg",
+    type: "cake",
+    price: "19",
+  },
+  {
+    id: 6,
+    name: "cupcake B40",
+    img: "img/cupcake-1.jpeg",
+    type: "cupcake",
+    price: "16",
+  },
+  {
+    id: 7,
+    name: "cupcake R40",
+    img: "img/cupcake-2.jpg",
+    type: "cupcake",
+    price: "22",
+  },
+  {
+    id: 8,
+    name: "cupcake D33",
+    img: "img/cupcake-3.jpg",
+    type: "cupcake",
+    price: "11",
+  },
+  {
+    id: 9,
+    name: "doughnut T300",
+    img: "img/doughnut-1.jpeg",
+    type: "doughnut",
+    price: "5",
+  },
+  {
+    id: 10,
+    name: "doughnut T505",
+    img: "img/doughnut-2.jpeg",
+    type: "doughnut",
+    price: "7",
+  },
+  {
+    id: 11,
+    name: "doughnut special",
+    img: "img/doughnut-3.jpg",
+    type: "doughnut",
+    price: "12",
+  },
+  {
+    id: 12,
+    name: "doughnut A31",
+    img: "img/doughnut-4.jpg",
+    type: "doughnut",
+    price: "3",
+  },
+];
+
+export default cakes;

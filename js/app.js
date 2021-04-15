@@ -62,3 +62,53 @@
     document.querySelector('#item-count').innerHTML = total.length;
   }
 })();
+
+
+// display cakes from data
+import cakesData from './modules/data.js';
+const itemsContainer = document.querySelector('#store-items');
+
+document.addEventListener('DOMContentLoaded', () => {
+  let html = '';
+  cakesData.forEach(cake => {
+    html += `
+      <!-- single item -->
+      <div class="col-10 mx-auto col-sm-6 col-lg-4 mt-5 store-item" data-item=${cake.type}>
+        <div class="card single-item">
+          <div href="#" class="img-container d-block">
+            <img src=${cake.img} alt=${cake.name} class="card-img-top store-img">
+            <!-- Button trigger modal -->
+            <span class="store-item-icon" data-toggle="modal" data-target="#exampleModal">
+              <i class="fas fa-shopping-cart"></i>
+            </span>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-text d-flex justify-content-between text-capitalize">
+              <h5 class="store-item-name">${cake.name}</h5>
+              <h5 class="store-item-value">$ <strong id="store-item-price" class="font-weight-bold">${cake.price}</strong></h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- end of single item -->
+    `
+  });
+  itemsContainer.innerHTML = html;
+})
+
