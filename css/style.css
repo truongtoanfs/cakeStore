@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Kaushan+Script");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
 
 :root {
   --mainPink: #ef7998;
@@ -7,6 +8,9 @@
   --mainBlack: #000;
   --yellowTrans: rgba(249, 228, 148, 0.1);
   --mainGrey: rgb(238, 238, 238);
+  --red-color: #e32124;
+  --black333: #333;
+  --greyCCC: #ccc;
 }
 html {
   scroll-behavior: smooth;
@@ -16,8 +20,20 @@ body {
   background: var(--mainWhite);
   color: var(--mainBlack);
 }
-
-
+.reset-a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.reset-a.hover {
+  text-decoration: none;
+  color: inherit;
+}
+.font-roboto {
+  font-family: 'Roboto', sans-serif;
+}
+.overflow-hidden {
+  overflow: hidden;
+}
 /* globle variable */
 .btn-pink {
   color: var(--mainPink) !important;
@@ -140,17 +156,15 @@ body {
   box-shadow: 0 10px 15px rgb(0, 0, 0);
 }
 .img-container {
-  position: relative;
   overflow: hidden;
-  cursor: pointer;
 }
-.store-img {
+.store__img {
   transition: all 0.5s linear;
 }
-.img-container:hover .store-img {
+.single-item:hover .store__img {
   transform: scale(1.1);
 }
-.store-item-icon {
+.store__item-icon {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -158,21 +172,128 @@ body {
   background-color: var(--mainYellow);
   border-top-left-radius: 0.5rem;
   transform: translate(100%, 100%);
-  transition: all 0.5s linear;
+  transition: transform 0.3s linear, color 0.1s ease-out;
+  cursor: pointer;
 }
-.img-container:hover .store-item-icon {
+.card-header:hover .store__item-icon {
   transform: translate(0, 0);
 }
-.store-item-icon:hover {
+.store__item-icon:hover {
   color: var(--mainPink);
 }
 
 @media screen and (min-width: 992px) {
-  .store-item {
+  .store__item {
     margin-bottom: 2rem;
   }
 }
 
+/* modal section */
+.modal-width {
+  max-width: 900px !important;
+}
+.close--modal {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--mainWhite) !important;
+  background: var(--mainBlack) !important;
+  border: 1px solid var(--mainPink) !important;
+  opacity: 1 !important;
+  padding: 0 2px 5px 0 !important;
+  font-weight: 500;
+  outline: none !important;
+}
+.modal-order__title {
+  font-size: 20px;
+  font-weight: 400;
+}
+.modal-order__price {
+  padding: 5px 0;
+}
+.modal-order__price-new {
+  font-size: 24px;
+  color: var(--red-color);
+  margin-right: 6px;
+}
+.modal-order__price-old {
+  color: #858585;
+  text-decoration: line-through;
+}
+.modal-order__option {
+  font-size: 14px;
+  color: var(--black333);
+  margin-bottom: 6px;
+}
+.modal-order__option-label {
+  font-weight: 500;
+  min-width: 100px;
+}
+.modal-order__option input[type=radio] {
+  display: none;
+}
+.modal-order__option-value {
+  display: block;
+  padding: 5px 8px;
+  border: 1px solid var(--greyCCC);
+  margin-right: 3px;
+  cursor: pointer;
+}
+.modal-order__option input[type=radio]:checked + .modal-order__option-value {
+  border-color: var(--red-color);
+  background: url(https://theme.hstatic.net/200000164551/1000607122/14/checkbox-product.png?v=724) no-repeat right bottom #fff;
+}
+/* Chrome, Safari, Edge, Opera */
+/* reset input type=number */
+.modal-order__amount-input::-webkit-outer-spin-button,
+.modal-order__amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.modal-order__amount-input[type=number] {
+  -moz-appearance: textfield;
+}
+.modal-order__amount-control:focus,
+.modal-order__amount-input:focus {
+  box-shadow: none;
+}
+.modal-order__amount-control {
+  width: 46px !important;
+  border: 1px solid var(--greyCCC);
+  background-color: var(--mainWhite);
+}
+
+.modal-order__amount-input {
+  flex: none !important;
+  width: 56px !important;
+  height: 33px !important;
+  font-weight: 500;
+}
+.modal-order__cart {
+  color: var(--mainPink);
+  background-color: var(--mainGrey);
+  border: 1px solid var(--greyCCC);
+  padding: 5px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.modal-order__cart:hover {
+  color: var(--mainBlack);
+  background-color: var(--mainPink);
+}
+.modal-order__link {
+  color: var(--black333);
+}
+.modal-order__link:hover {
+  color: var(--mainPink);
+}
 
 /* service section */
 .service {
