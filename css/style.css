@@ -213,7 +213,6 @@ body {
   box-shadow: 0 10px 15px rgb(0, 0, 0);
 }
 .img-container {
-  cursor: default;
   overflow: hidden;
 }
 .store__img {
