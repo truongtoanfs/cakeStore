@@ -5,26 +5,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="cake store, cupcakes, doughnut, order cake">
   <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <!-- main css -->
   <link rel="stylesheet" href="css/style.css">
   <!-- font awesome -->
-  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/all.min.css">
   <title>Cake Store</title>
 </head>
 
 <body>
   <header id="header">
     <nav class="navbar navbar-expand-lg px-4 fixed-top bg-light">
-      <a href="/" class="navbar-brand">
-        <img style="width: 50px; height: 50px;" src="img/logo2.jpg" alt="main icon">
-      </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-        <span class="toggler-icon">
-          <i class="fas fa-bars"></i>
-        </span>
+        <span class="toggler-icon"><i class="fas fa-bars"></i></span>
       </button>
+      <a href="/" class="navbar-brand p-0">
+        <img src="./img/logo-icon.png" alt="main icon">
+      </a>
+      
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
@@ -44,21 +44,45 @@
           </li>
         </ul>
       </div>
-      <div class="nav-info-items d-none d-lg-flex">
-        <div class="nav-info d-flex justify-content-between align-items-center mx-lg-5">
+      <div class="nav-info-items d-lg-flex">
+        <div class="nav-info d-none d-lg-flex justify-content-between align-items-center mx-lg-5">
           <span class="info-icon mx-lg-3">
             <i class="fas fa-phone"></i>
           </span>
           <a class="nav-info__link" href="tel:0396762825" class="mb-0">039 6762 825</a>
         </div>
+
         <div class="nav-info cart-info d-flex justify-content-between align-items-center mx-lg-5" id="cart-info">
           <span class="cart-info__icon mr-lg-3">
             <i class="fas fa-shopping-cart"></i>
           </span>
           <p class="mb-0 text-capitalize">
-            <span id="item-count">2</span> items - $
-            <span class="item-total">10.49</span>
+            <span id="item-count">0</span> items - $
+            <span id="item-total">0</span>
           </p>
+        </div>
+
+        <!-- cart -->
+        <div class="cart p-3 d-none" id="cart">
+          <p class="p-3 cart-notify">Your shopping cart is empty</p>
+          <div class="cart-items">
+            <!-- <div class="cart-item align-items-center my-3 d-flex">
+              <img src="./img/doughnut-1.jpg" alt="cupcake" class="cart-item__img">
+              <div class="item-text pl-1">
+                <h3 class="cart-item__name mb-0">Cake AT10954</h3>
+                <p class="mb-0">Amount:<span class="cart-item__amount ml-1">2</span></p>
+                <p class="mb-0">Price:<span class="cart-item__price ml-1">$21</span></p>
+              </div>
+            </div> -->
+          </div>
+          <div class="cart-total-container d-flex justify-content-between text-capitalize mt-3">
+            <h5>total:</h5>
+            <h5>$ <strong class="font-weight-bold" id="cart-total">0</strong></h5>
+          </div>
+          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
+            <a href="#" class="btn btn-black text-uppercase cart-item__btn" id="detail-cart">Detail</a>
+            <a href="#" class="btn btn-pink text-uppercase cart-item__btn" id="check-cart">checkout</a>
+          </div>
         </div>
       </div>
     </nav>
@@ -70,56 +94,6 @@
             welcome to <strong class="banner-title">Cake Shop</strong>
           </h1>
           <a href="#store" class="btn banner-link text-uppercase my-2">explore</a>
-        </div>
-        <!-- cart -->
-        <div class="cart" id="cart">
-          <!-- single item -->
-          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img-cart/cupcake-1.jpeg" alt="cupcake" class="img-fluid rounded-circle" id="item-img">
-            <div class="item-text">
-              <p class="cart-item-title font-weight-bold mb-0">cart item</p>
-              <span>$</span>
-              <span class="cart-item-price mb-0">10.99</span>
-            </div>
-            <a href="#" class="cart-item-remove">
-              <i class="fas fa-trash"></i>
-            </a>
-          </div>
-          <!-- end of single item -->
-          <!-- single item -->
-          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img-cart/doughnut-1.jpeg" alt="doughnut" class="img-fluid rounded-circle" id="item-img">
-            <div class="item-text">
-              <p class="cart-item-title font-weight-bold mb-0">cart item</p>
-              <span>$</span>
-              <span class="cart-item-price mb-0">1.99</span>
-            </div>
-            <a href="#" class="cart-item-remove">
-              <i class="fas fa-trash"></i>
-            </a>
-          </div>
-          <!-- end of single item -->
-          <!-- single item -->
-          <div class="cart-item d-flex justify-content-between text-capitalize my-3">
-            <img src="img-cart/sweets-1.jpeg" alt="sweets" class="img-fluid rounded-circle" id="item-img">
-            <div class="item-text">
-              <p class="cart-item-title font-weight-bold mb-0">cart item</p>
-              <span>$</span>
-              <span class="cart-item-price mb-0">6.99</span>
-            </div>
-            <a href="#" class="cart-item-remove">
-              <i class="fas fa-trash"></i>
-            </a>
-          </div>
-          <!-- end of single item -->
-          <div class="cart-total-container d-flex justify-content-around text-capitalize mt-5">
-            <h5>total</h5>
-            <h5>$ <strong class="cart-total font-weight-bold">10.00</strong></h5>
-          </div>
-          <div class="cart-buttons-container mt-3 d-flex justify-content-between">
-            <a href="#" class="btn btn-black text-uppercase" id="clear-cart">clear cart</a>
-            <a href="#" class="btn btn-pink text-uppercase" id="check-cart">checkout</a>
-          </div>
         </div>
       </div>
     </div>
@@ -154,10 +128,10 @@
 
       <div class="row">
         <div class="col-lg-8 mx-auto d-flex justify-content-center flex-wrap sortBtn">
-          <a href="#" class="btn btn-black text-uppercase m-2 filter-btn" data-filter="all">all</a>
-          <a href="#" class="btn btn-black text-uppercase m-2 filter-btn" data-filter="cakes">cakes</a>
-          <a href="#" class="btn btn-black text-uppercase m-2 filter-btn" data-filter="cupcakes">cupcakes</a>
-          <a href="#" class="btn btn-black text-uppercase m-2 filter-btn" data-filter="doughnuts">doughnuts</a>
+          <button class="btn btn-black text-uppercase m-2 filter-btn active" data-filter="all">all</button>
+          <button class="btn btn-black text-uppercase m-2 filter-btn" data-filter="cake">cakes</button>
+          <button class="btn btn-black text-uppercase m-2 filter-btn" data-filter="cupcake">cupcakes</button>
+          <button class="btn btn-black text-uppercase m-2 filter-btn" data-filter="doughnut">doughnuts</button>
         </div>
       </div>
 
@@ -165,7 +139,7 @@
         <div class="col-10 mx-auto col-md-6">
           <form>
             <div class="input-group my-3">
-              <div class="input-group-prepend">
+              <div class="input-group-prepend store-search-icon">
                 <span class="input-group-text search-box" id="search-box">
                   <i class="fas fa-search"></i>
                 </span>
