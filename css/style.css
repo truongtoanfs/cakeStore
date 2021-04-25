@@ -51,8 +51,6 @@ body {
   color: var(--mainPink) !important;
   border-color: var(--mainPink) !important;
 }
-/* end of global section */
-
 
 /* navbar section */
 .navbar-toggler {
