@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="cake store, cupcakes, doughnut, order cake">
-  <!-- bootstrap css -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <!-- main css -->
   <link rel="stylesheet" href="css/style.css">
-  <!-- font awesome -->
   <link rel="stylesheet" href="css/all.min.css">
   <title>Cake Store</title>
 </head>
-
 <body>
   <header id="header">
     <nav class="navbar navbar-expand-lg px-4 fixed-top bg-light">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
         <span class="toggler-icon"><i class="fas fa-bars"></i></span>
       </button>
+
       <a href="/cakeStore/" class="navbar-brand p-0">
         <img src="./img/logo-icon.png" alt="main icon">
       </a>
-      
+
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active">
@@ -44,6 +40,7 @@
           </li>
         </ul>
       </div>
+
       <div class="nav-info-items d-lg-flex">
         <div class="nav-info d-none d-lg-flex justify-content-between align-items-center mx-lg-5">
           <span class="info-icon mx-lg-3">
@@ -62,18 +59,9 @@
           </p>
         </div>
 
-        <!-- cart -->
         <div class="cart p-3 d-none" id="cart">
           <p class="p-3 cart-notify">Your shopping cart is empty</p>
           <div class="cart-items">
-            <!-- <div class="cart-item align-items-center my-3 d-flex">
-              <img src="./img/doughnut-1.jpg" alt="cupcake" class="cart-item__img">
-              <div class="item-text pl-1">
-                <h3 class="cart-item__name mb-0">Cake AT10954</h3>
-                <p class="mb-0">Amount:<span class="cart-item__amount ml-1">2</span></p>
-                <p class="mb-0">Price:<span class="cart-item__price ml-1">$21</span></p>
-              </div>
-            </div> -->
           </div>
           <div class="cart-total-container d-flex justify-content-between text-capitalize mt-3">
             <h5>total:</h5>
@@ -84,9 +72,10 @@
             <a href="#" class="btn btn-pink text-uppercase cart-item__btn" id="check-cart">checkout</a>
           </div>
         </div>
+
       </div>
     </nav>
-    <!-- banner -->
+
     <div class="container-fluid">
       <div class="row max-height justify-content-center align-items-center">
         <div class="col-10 mx-auto banner text-center">
@@ -97,9 +86,7 @@
         </div>
       </div>
     </div>
-    <!-- end of banner -->
   </header>
-  <!-- section about -->
   <section class="about py-5" id="about">
     <div class="container">
       <div class="row align-items-center">
@@ -116,8 +103,6 @@
       </div>
     </div>
   </section>
-  <!-- end of section about -->
-  <!-- store section -->
   <section class="store py-5" id="store">
     <div class="container">
       <div class="row">
@@ -155,8 +140,6 @@
       </div>
     </div>
   </section>
-  <!-- end of store section -->
-  <!-- services section -->
   <section class="service py-5" id="service">
     <div class="row">
       <div class="col-md-4 text-center my-3">
@@ -176,8 +159,6 @@
       </div>
     </div>
   </section>
-  <!-- end of services section -->
-  <!-- order section -->
   <section class="order py-5" id="order">
     <div class="container">
       <div class="row">
@@ -186,7 +167,6 @@
         </div>
       </div>
       <div class="row">
-        <!-- single item-->
         <div class="col-11 mx-auto my-4 col-md-6 col-lg-4 text-capitalize text-center">
           <h3 class="py-3">birthday cake</h3>
           <div class="text-muted">
@@ -199,8 +179,7 @@
             <img src="./img/birthday-cake.png" alt="" class="order-cake">
           </div>
         </div>
-        <!-- end of single item-->
-        <!-- single item-->
+
         <div class="col-11 mx-auto my-4 col-md-6 col-lg-4 text-capitalize text-center">
           <h3 class="py-3">custom cake</h3>
           <div class="text-muted">
@@ -213,8 +192,7 @@
             <img src="./img/custom-cake.png" alt="" class="order-cake">
           </div>
         </div>
-        <!-- end of single item-->
-        <!-- single item-->
+
         <div class="col-11 mx-auto my-4 col-md-6 col-lg-4 text-capitalize text-center">
           <h3 class="py-3">wedding cake</h3>
           <div class="text-muted">
@@ -227,11 +205,10 @@
             <img src="./img/wedding-cake.png" alt="" class="order-cake">
           </div>
         </div>
-        <!-- end of single item-->
+        
       </div>
     </div>
   </section>
-  <!-- end of order section -->
   <footer>
     <div class="container-fluid">
       <div class="row">
@@ -278,11 +255,8 @@
       </div>
     </div>
   </footer>
-  <!-- jquery -->
   <script src="js/jquery-3.3.1.min.js"></script>
-  <!-- bootstrap js -->
   <script src="js/bootstrap.bundle.min.js"></script>
-  <!-- script js -->
   <script src="js/app.js" type="module"></script>
 </body>
 

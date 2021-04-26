@@ -8,7 +8,7 @@ $(document).ready(function() {
       <div class="col-10 mx-auto col-sm-6 col-lg-4 my-5 store-item" data-name="${cake.name}" data-type="${cake.type}">
         <div class="card single-item">
           <div class="card-header position-relative overflow-hidden p-0">
-            <a href="#" class="img-container d-block reset-a">
+            <a href="JavaScript:Void(0);" class="img-container d-block reset-a">
               <img src="${cake.img}" alt="${cake.name}" class="card-img-top store__img">
             </a>
             <span class="store__item-icon" data-toggle="modal" data-target="#${cake.id}">
@@ -111,7 +111,7 @@ $(document).ready(function() {
           </div>
           <div class="card-body">
             <div class="card-text d-flex justify-content-between text-capitalize">
-              <h5 class="store__item-name"><a href="#" class="reset-a">${cake.name}</a></h5>
+              <h5 class="store__item-name"><a href="JavaScript:Void(0);" class="reset-a">${cake.name}</a></h5>
               <h5 class="store__item-value">$ <strong class="font-weight-bold">${cake.price}</strong></h5>
             </div>
           </div>
