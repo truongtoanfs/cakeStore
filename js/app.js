@@ -280,4 +280,20 @@ $(document).ready(function() {
       $('#cart').addClass('d-none');
     }        
   });
+
+  // register service worker
+  const registerServiceWorker = async () => {
+    if ("serviceWorker" in navigator) {
+      try {
+        await navigator.serviceWorker.register("/service-worker.js", {
+          scope: "/",
+        });
+      } catch (error) {
+        console.error(`Registration failed with ${error}`);
+      }
+    } else {
+      console.log('Service workers are not supported.');
+    }
+  }
+  registerServiceWorker();
 });
