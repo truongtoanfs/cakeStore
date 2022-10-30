@@ -286,7 +286,7 @@ $(document).ready(function() {
     if ("serviceWorker" in navigator) {
       try {
         await navigator.serviceWorker.register("./service-worker.js", {
-          scope: "/",
+          scope: "./",
         });
       } catch (error) {
         console.error(`Registration failed with ${error}`);
