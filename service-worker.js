@@ -2,7 +2,7 @@ const version = 1;
 let staticCache = `staticCache-${version}`;
 let imageCache = `imageCache-${version}`;
 
-let assets = ['/', '/index.html', '/404.html'];
+let assets = ['./', './index.html', './404.html'];
 
 const addResourcesToCache = async () => {
   try {
@@ -52,7 +52,7 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     handleResponse({
       request: event.request,
-      fallbackUrl: '/404.html',
+      fallbackUrl: './404.html',
     })
   )
 })

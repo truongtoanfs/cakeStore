@@ -285,7 +285,7 @@ $(document).ready(function() {
   const registerServiceWorker = async () => {
     if ("serviceWorker" in navigator) {
       try {
-        await navigator.serviceWorker.register("/service-worker.js", {
+        await navigator.serviceWorker.register("./service-worker.js", {
           scope: "/",
         });
       } catch (error) {
